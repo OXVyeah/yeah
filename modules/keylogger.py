@@ -70,6 +70,8 @@ def KeyStroke(event):
 
     # create and register a hook manager
 
+
+
 def run():
     print "\n 0000000"
     ti=0
@@ -78,11 +80,15 @@ def run():
         time.sleep(1)
         ti+=1
         kl = pyHook.HookManager()
+        print 1
         kl.KeyDown = KeyStroke
+        print 2
         kl.HookKeyboard()
+        print 3
         pythoncom.PumpMessages()
+        print 4
         sys.exit(0)
-         
+    
     print("key over")
     sys.exit(0)
     return 0
