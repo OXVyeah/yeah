@@ -3,6 +3,7 @@ import pythoncom
 import pyHook
 import win32clipboard
 import win32api
+import time
 
 user32 = windll.user32
 kernel32 = windll.kernel32
