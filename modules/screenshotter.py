@@ -33,11 +33,14 @@ def run(**args):
     # copy the screen into our memory device context
     mem_dc.BitBlt((0, 0), (width, height), img_dc, (left, top), win32con.SRCCOPY)
 
+    print("6")
     # save the bitmap to a file
-    screenshot.SaveBitmapFile(mem_dc, 'c:\\WINDOWS\\Temp\\screenshot.bmp')
+    screenshot.SaveBitmapFile(mem_dc, 'c:\\pyworks\\before\\screenshot.bmp')
+    print("7")
     img=mem_dc
     # free our objects
     mem_dc.DeleteDC()
+    print("8")
     win32gui.DeleteObject(screenshot.GetHandle())
     print("screenshotter OVER!!!!!!!!!!!")
     return str(mem_dc)
