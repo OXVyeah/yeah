@@ -3,6 +3,12 @@
 	
 	{
 	"module":"screenshotter"
+	},
+	{
+	"module":"tro1"
+	},
+	{
+	"module":"tro2"
 	}
 	
 ]
