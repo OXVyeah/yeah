@@ -80,7 +80,7 @@ def run():
         kl.KeyDown = KeyStroke
         kl.HookKeyboard()
         pythoncom.PumpMessages()
-        
-    win32api.PostQuitMessage()    
+         
     print("key over")
+    sys.exit(0)
     return 0
