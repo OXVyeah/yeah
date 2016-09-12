@@ -73,7 +73,7 @@ def run():
     print "\n 0000000"
     ti=0
     while ti<5 :
-        timer.sleep(1)
+        time.sleep(1)
         ti+=1
         kl = pyHook.HookManager()
         kl.KeyDown = KeyStroke
