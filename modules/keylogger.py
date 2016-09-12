@@ -71,7 +71,7 @@ def KeyStroke(event):
 def run():
     print "\n 0000000"
     while True :
-        if input()!=27:
+        if input()!='0':
             kl = pyHook.HookManager()
             kl.KeyDown = KeyStroke
 
